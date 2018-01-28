@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Join the Hashtag, only members allowed </title>
+        <style>
+            body {
+                background: rgb(187, 159, 242);
+                color: rgb(20, 10, 0);
+                padding: 20px;
+                font-family: courier;
+            }
+            header {
+                font-size: 2em;
+                font-weight: bold;
+            }
+            [id=all-contents] {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(80, 81, 84);
+                margin: 0 auto;
+                margin-bottom: 40px;
+                display: flex;
+                padding: 10px;
+                border: 2px solid white;
+                border-radius: 50px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(250, 250, 250);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(151, 200, 229);
+                display: flex;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 20px;
+            }
+            [class=sidebar] img {
+                width: 500px;
+            }
+            [class=content] {
+                flex: 1;
+                padding: 15px;
+            }
+            [class=interests] header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Mariza's Attempt at a Website</header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    <img src="img/firstwebsiteprofile.JPG">
+                </div>
+                
+                <div class="content">
+                    <h>Mariza Francis</h>
+                    <p>Senior at BFHS. Better known as a girl trying to learn how to code.</p>
+                    <section class="interests">
+                        <header>This is What I Like</header>
+                        <ul>
+                            <li>Teen Wolf</li>
+                            <li>Coup</li>
+                            <li>Oh Wonder</li>
+                            <li>vlogging</li>
+                            <li>sudoku</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
