@@ -1,38 +1,37 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Join the Hashtag, only members allowed
-        </title>
-          <style type="text/css">
+        <title>Join the Hashtag, only members allowed </title>
+        <style>
             body {
-                background: rgb(125, 198, 205);
-                color: rgb(45, 45, 45);
-                padding: 10px;
-                font-family: arial;
+                background: rgb(187, 159, 242);
+                color: rgb(20, 10, 0);
+                padding: 20px;
+                font-family: courier;
             }
             header {
-                font-size: 1.5em;
+                font-size: 2em;
                 font-weight: bold;
             }
-            h1 {
-                margin: 10px;
-            }
-            #all-contents {
+            [id=all-contents] {
                 max-width: 800px;
                 margin: auto;
             }
     
             /* navigation menu */
             nav {
-                background: rgb(239, 80, 41);
+                background: rgb(80, 81, 84);
                 margin: 0 auto;
+                margin-bottom: 40px;
                 display: flex;
                 padding: 10px;
+                border: 2px solid white;
+                border-radius: 50px;
             }
             nav header {
                 display: flex;
                 align-items: center;
-                color: rgb(255, 255, 255);
+                color: rgb(250, 250, 250);
                 flex: 1;
             }
             nav ul {
@@ -49,13 +48,14 @@
     
             /* main container area beneath menu */
             main {
-                background: rgb(245, 238, 219);
+                background: rgb(151, 200, 229);
                 display: flex;
             }
-            .content {
+            .content{
                 flex: 1;
                 padding: 15px;
             }
+            /* portfolio styles */
             #portfolio {
                 list-style-type: none;
                 padding-left: 0;
@@ -78,11 +78,10 @@
             }
         </style>
     </head>
-
+    
     <body>
-      <div id="all-contents">
-       <nav>
-            <header>Sheba's Glorious Website</header>
+        <nav>
+            <header>Mariza's Attempt at a Website</header>
             <ul>
                 <li><a href="index.html">Home</a>
                 </li>
@@ -97,6 +96,10 @@
                 </ul>
             </div>
         </main>
-      </div>
+        <div id="all-contents">
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
     </body>
 </html>
