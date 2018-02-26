@@ -10,15 +10,16 @@
 	<!-- BEGIN CSS -->
 	<style>
 		/* TODO 1 */
-		[class="box"] {
+		[class="box"] 
+		{
 			display: block;
 			position: absolute;
-			width: 70px;
-			height: 70px;
+			width: 40px;
+			height: 40px;
 			top: 100px;
 			left: 0px;
-			background-color: teal;
-			font-size: 300%;
+			background-color: yellow;
+			font-size: 200%;
 			text-align: center;
 		}
 	</style>
@@ -30,7 +31,8 @@
 
 	<!-- BEGIN JAVASCRIPT -->
 	<script>
-		(function(){
+		(function()
+		{
 			'use strict'
 			/* global &*/
 
@@ -39,17 +41,20 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			
 
 			// jQuery stuff setup for you
 			box = $('.box');
 			boardWidth = $('.board').width();
+		
 
 			// TODO 2
 			var position;
 			var points;
 			var speed;
-			
-			position = 0;
+			var direction;
+			direction = 1;
+			position = 3;
 			points = 0;
 			speed = 10;
 			box.css('left', position);
@@ -57,15 +62,25 @@
 
 
 			// TODO 3 / 4
-			update = function() {
-				position = position + speed;
+			update = function() 
+			{
+				position = position + (speed * direction);
+				if(position > boardWidth)
+				{
+					direction = -1;
+				}
+				if(position < 0)
+				{
+					direction = 1;
+				}
 				box.css('left', position);
 				box.text(points);
 			};
 
 
 			// TODO 5 / 6
-			handleBoxClick = function() {
+			handleBoxClick = function() 
+			{
 				speed = speed + 3;
 				position = 0;
 				points = points + 1;
